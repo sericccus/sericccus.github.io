@@ -1,0 +1,17 @@
+body {
+    width: 80vw;
+    max-height: 900px;
+    background-color: rgb(32, 32, 32);
+    color: rgb(209, 209, 209);
+    margin: 0 auto;
+}
+
+main {
+    width: 800px;
+    height: auto;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
