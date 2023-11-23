@@ -8,7 +8,7 @@ body {
 
 main {
     width: 800px;
-    height: auto;
+    height: 900px;
     margin: 0 auto;
     display: grid;
     justify-content: center;
