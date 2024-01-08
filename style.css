@@ -59,7 +59,7 @@ div:not(.parent) {
   height: 8vh;
   width: 8vw;
 }
-#info {
+#mouse_pos {
   color: rgb(167, 75, 71);
   font-family: "Roboto Mono", serif;
   font-size: 16px;
