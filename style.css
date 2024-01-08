@@ -71,7 +71,7 @@ div:not(.parent) {
   justify-content: end;
   align-items: center;
 }
-#info p, #dimensions p {
+#mouse_pos p, #dimensions p {
   font-size: 13px;
 }
 #dimensions {
