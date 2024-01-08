@@ -27,11 +27,11 @@ displayDateTime(); // Start the process
 
 
 
-// GET MOUSE POSITION AND SHOW IN #info DIV
-var info = document.querySelector('#info span');
+// GET MOUSE POSITION AND SHOW IN #mouse_pos DIV
+var mouse_pos = document.querySelector('#mouse_pos span');
 onmousemove = (e) => console.log(e)
 function tellPos(p){
-  info.innerHTML = "(" + p.pageX + ", " + p.pageY + ")"; 
+  mouse_pos.innerHTML = "(" + p.pageX + ", " + p.pageY + ")"; 
   // PageX and PageY are event-object-keys ===> check console.log(e)
 }
 addEventListener('mousemove', tellPos, false);
@@ -51,6 +51,7 @@ document.addEventListener("keydown", function(e) { // e is just a var, it just a
   KeyKey.innerText = String(e.key);
 });
 
+// MAKE CHANGE ON MOUSEOVER
 // MAKE THE BALL JUMP ON CLICK
 
 // MAKE THE BALL JUMP ON CLICK IN DIRECTION OF MOUSE POS
