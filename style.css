@@ -103,6 +103,9 @@ div:not(.parent) {
   justify-content: end;
 }
 
+.vroom {
+  cursor: zoom-in;
+}
 .div1 {
   color: rgb(151, 126, 24);
   width: calc(8vw * 8);
