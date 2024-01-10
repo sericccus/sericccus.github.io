@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>sus title</title>
+    <title>sus</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,11 +20,12 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    
+
 <!-- 10 px wide grid in the background-->
     <div class="_10px_grid"></div>
-    
+
     <div class="parent">
+      <div id="circle"></div>
 <!-- INFOS -->
       <div id="clock"></div>
       <div id="mouse_pos"><p>mouse pos</p><span></span></div>
@@ -35,25 +36,27 @@
         <p id="key-code">code <span>65</span></p>
       </div>
       <div class="div1" id="center">
-      <div id="ball">+</div>
+      
 <!-- VROOM VROOM -->
         <audio id="audio">
           <source src="/sounds/vroom.mp3" type="audio/mp3">
         </audio>
-        <p onclick="play()">vroom vroom room</p>
+        <p onclick="play()">welcome to the <span>vroom vroom</span></p>
       </div>
-<!-- RIM DIVS -->
-      <div class="div2"></div>
-      <div class="div3"></div>
-      <div class="div4"></div>
-      <div class="div5"></div>
     </div>
-
     
+<!-- OUTER RIM DIVS -->
+    <div class="div2"></div>
+    <div class="div3"></div>
+    <div class="div4"></div>
+    <div class="div5"></div>
+    <div class="div6"><canvas>
+    </canvas></div>
+    <div class="div7">
+      <div class="circle2"></div>
+    </div>
     
-    <!-- <script src="/libraries/p5/p5.min.js"></script> -->
+<!-- <script src="/libraries/p5/p5.min.js"></script> -->
     <script src="/script.js"></script>
-    <!-- <script src="/sketch.js"></script> -->
-
   </body>
 </html>

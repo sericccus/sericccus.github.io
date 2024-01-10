@@ -4,7 +4,7 @@
 }
 
 html {
-  font-family: "Roboto Slab", serif;
+  font-family: "Roboto Mono", serif;
 
 }
 * { padding: 0;
@@ -15,6 +15,8 @@ body {
   background-color: rgb(48, 44, 44);
   color: rgb(209, 209, 209);
   margin: 0 auto;
+  position: relative;
+  overflow: hidden;
 
 }
 a {
@@ -35,7 +37,7 @@ li {
   z-index: -1;
   height: 100vh;
   width: 100vw;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3E%3Crect width='10' height='10' fill='rgb(38, 44, 49)' /%3E%3Crect x='50%' width='0.1' height='100%' fill='rgba(203, 213, 225, 0.15)' /%3E%3Crect y='50%' width='100%' height='0.1' fill='rgba(203, 213, 225, 0.15)' /%3E%3C/svg%3E%0A");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3E%3Crect width='10' height='10' fill='rgb(30, 44, 49)' /%3E%3Crect x='50%' width='0.1' height='100%' fill='rgba(203, 213, 225, 0.15)' /%3E%3Crect y='50%' width='100%' height='0.1' fill='rgba(203, 213, 225, 0.15)' /%3E%3C/svg%3E%0A");
 }
 
 div:not(.parent) {
@@ -54,7 +56,7 @@ div:not(.parent) {
 }
 #clock {
   font-family: "Roboto Mono", serif;
-  font-size: 16px;
+  font-size: 12px;
   grid-area: 1 / 1 / 2 / 2;
   height: 8vh;
   width: 8vw;
@@ -62,7 +64,7 @@ div:not(.parent) {
 #mouse_pos {
   color: rgb(167, 75, 71);
   font-family: "Roboto Mono", serif;
-  font-size: 16px;
+  font-size: 12px;
   grid-area: 12 / 4 / 13 / 6;
   height: 8vh;
   width: 16vw;
@@ -72,13 +74,13 @@ div:not(.parent) {
   align-items: center;
 }
 #mouse_pos p, #dimensions p {
-  font-size: 13px;
+  font-size: 10px;
 }
 #dimensions {
   color: rgb(81, 139, 86);
   position: relative;
   font-family: "Roboto Mono", serif;
-  font-size: 16px;
+  font-size: 12px;
   width: 16vw;
   height: 8vh;
   grid-area: 12 / 8 / 13 / 10;
@@ -92,7 +94,7 @@ div:not(.parent) {
   color: rgb(81, 139, 86);
   position: relative;
   font-family: "Roboto Mono", serif;
-  font-size: 16px;
+  font-size: 12px;
   width: 16vw;
   height: 8vh;
   grid-area: 12 / 6 / 13 / 8;
@@ -101,24 +103,11 @@ div:not(.parent) {
   justify-content: end;
 }
 
-#ball {
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background-color: white;
-  color: black;
-  top: var(--ball-y);
-  left: var(--ball-x);
-  font-weight: 900;
-}
-
 .div1 {
-  position: relative;
   color: rgb(151, 126, 24);
-  width: calc(8vw * 10);
-  height: calc(8vh * 10);
-  grid-area: 2 / 2 / 12 / 12;
+  width: calc(8vw * 8);
+  height: calc(8vh * 8);
+  grid-area: 3 / 3 / 11 / 11;
 }
 .div2 {
   width: calc(8vw * 12);
@@ -144,3 +133,29 @@ div:not(.parent) {
   grid-area: 1 / 1 / 12 / 2;
   /* border-right: 01px solid rgba(226, 192, 141, 0.2); */
 }
+.div6 {
+  width: 8vw;
+  height: 8vh;
+  grid-area: 12 / 11 / 13 / 12;
+
+  border: 1px solid rgba(245, 222, 179, 0.233);
+  overflow: hidden;
+}
+
+#circle {
+  width: 25px;
+  height: 25px;
+  background-color: #618ca8;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: calc(16vw - 12.5px);
+}
+
+canvas {
+  /* border: 1px solid rgb(245, 222, 179); */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
