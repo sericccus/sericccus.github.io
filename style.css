@@ -12,7 +12,7 @@ html {
     position: relative;
   }
 body {
-  background-color: rgb(48, 44, 44);
+  background-color: #333333;
   color: rgb(209, 209, 209);
   margin: 0 auto;
   position: relative;
@@ -37,7 +37,7 @@ li {
   z-index: -1;
   height: 100vh;
   width: 100vw;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3E%3Crect width='10' height='10' fill='rgb(30, 44, 49)' /%3E%3Crect x='50%' width='0.1' height='100%' fill='rgba(203, 213, 225, 0.15)' /%3E%3Crect y='50%' width='100%' height='0.1' fill='rgba(203, 213, 225, 0.15)' /%3E%3C/svg%3E%0A");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3E%3Crect width='10' height='10' fill='rgb(33, 33, 33)' /%3E%3Crect x='50%' width='0.1' height='100%' fill='rgba(203, 213, 225, 0.15)' /%3E%3Crect y='50%' width='100%' height='0.1' fill='rgba(203, 213, 225, 0.15)' /%3E%3C/svg%3E%0A");
 }
 
 div:not(.parent) {
