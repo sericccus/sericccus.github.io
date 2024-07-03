@@ -1,13 +1,16 @@
 :root {
   --ball-y: 100%;
   --ball-x: 0;
+  --font-s: 20px;
 }
 
 html {
   font-family: "Roboto Mono", serif;
 
 }
-* { padding: 0;
+* { 
+  box-sizing: border-box;
+  padding: 0;
     margin: 0;
     position: relative;
   }
@@ -56,15 +59,31 @@ div:not(.parent) {
 }
 #clock {
   font-family: "Roboto Mono", serif;
-  font-size: 12px;
-  grid-area: 1 / 1 / 2 / 2;
+  font-size: var(--font-s);
+  grid-area: 1 / 1 / 2 / 6;
   height: 8vh;
-  width: 8vw;
+  width: 40vw;
+  padding: 0;
+  margin: 0;
+  justify-content: start;
+  align-items: start;
 }
-#mouse_pos {
+#mouse-speed-div {
   color: rgb(167, 75, 71);
   font-family: "Roboto Mono", serif;
-  font-size: 12px;
+  font-size: var(--font-s);
+  grid-area: 12 / 2 / 13 / 4;
+  height: 8vh;
+  width: 16vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+#mouse-distance {
+  color: rgb(167, 75, 71);
+  font-family: "Roboto Mono", serif;
+  font-size: var(--font-s);
   grid-area: 12 / 4 / 13 / 6;
   height: 8vh;
   width: 16vw;
@@ -73,14 +92,26 @@ div:not(.parent) {
   justify-content: end;
   align-items: center;
 }
+#mouse_pos {
+  color: rgb(167, 75, 71);
+  font-family: "Roboto Mono", serif;
+  font-size: var(--font-s);
+  grid-area: 12 / 6 / 13 / 8;
+  height: 8vh;
+  width: 16vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
 #mouse_pos p, #dimensions p {
-  font-size: 10px;
+  font-size: var(--font-s);
 }
 #dimensions {
   color: rgb(81, 139, 86);
   position: relative;
   font-family: "Roboto Mono", serif;
-  font-size: 12px;
+  font-size: var(--font-s);
   width: 16vw;
   height: 8vh;
   grid-area: 12 / 8 / 13 / 10;
@@ -91,21 +122,23 @@ div:not(.parent) {
 
 }
 #key-log {
-  color: rgb(81, 139, 86);
+  color: rgba(209, 211, 80, 0.904);
   position: relative;
   font-family: "Roboto Mono", serif;
-  font-size: 12px;
+  font-size: var(--font-s);
   width: 16vw;
   height: 8vh;
-  grid-area: 12 / 6 / 13 / 8;
+  grid-area: 12 / 10 / 13 / 12;
   display: flex;
   flex-direction: column;
   justify-content: end;
 }
-
-.vroom {
-  cursor: zoom-in;
+#mouse_pos p, #dimensions p, #key-key, #mouse-distance p, #mouse-speed p {
+  text-transform: capitalize;
 }
+/* .vroom {
+  cursor: zoom-in;
+} */
 .div1 {
   color: rgb(151, 126, 24);
   width: calc(8vw * 8);
@@ -116,49 +149,40 @@ div:not(.parent) {
   width: calc(8vw * 12);
   height: 8vh;
   grid-area: 1 / 1 / 2 / 12;
-  /* border-bottom: 01px solid rgba(226, 192, 141, 0.2); */
+  /* border-bottom: 1px solid rgba(226, 192, 141, 0.849); */
 }
 .div3 {
   width: 8vw;
   height: calc(8vh * 12);
   grid-area: 1 / 12 / 12 / 12;
-  /* border-left: 01px solid rgba(226, 192, 141, 0.2); */
+  /* border-left: 1px solid rgba(226, 192, 141, 0.849); */
 }
 .div4 {
   width: calc(8vw * 12);
   height: 8vh;
   grid-area: 12 / 1 / 12 / 12;
-  /* border-top: 01px solid rgba(226, 192, 141, 0.2); */
+  /* border-top: 1px solid rgba(226, 192, 141, 0.849); */
 }
 .div5 {
   width: 8vw;
   height: calc(8vh * 12);
   grid-area: 1 / 1 / 12 / 2;
-  /* border-right: 01px solid rgba(226, 192, 141, 0.2); */
+  /* border-right: 1px solid rgba(226, 192, 141, 0.849); */
 }
 .div6 {
   width: 8vw;
   height: 8vh;
   grid-area: 12 / 11 / 13 / 12;
 
-  border: 1px solid rgba(245, 222, 179, 0.233);
-  overflow: hidden;
+  /* border: 1px solid rgba(226, 192, 141, 0.849); */
+  /* overflow: hidden; */
 }
 
-#circle {
-  width: 25px;
-  height: 25px;
-  background-color: #618ca8;
-  border-radius: 50%;
+#canvas {
   position: absolute;
-  bottom: 0;
-  left: calc(16vw - 12.5px);
-}
-
-canvas {
-  /* border: 1px solid rgb(245, 222, 179); */
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  position: absolute;
+  z-index: 1; /* Adjust the z-index value as needed */
 }
-

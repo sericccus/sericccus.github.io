@@ -17,46 +17,51 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="/sericccus.github.io/style.css" />
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-
-<!-- 10 px wide grid in the background-->
-    <div class="_10px_grid"></div>
+    <!-- 10 px wide grid in the background-->
+    <!-- <div class="_10px_grid"></div> -->
 
     <div class="parent">
-      <div id="circle"></div>
-<!-- INFOS -->
+      <!-- INFOS -->
       <div id="clock"></div>
-      <div id="mouse_pos"><p>mouse pos</p><span></span></div>
-      <div id="dimensions"><p>inner size</p><br>
+      <div id="mouse_pos"><p>mouse pos</p><span>( 0, 0 )</span></div>
+      <div id="dimensions"><p>inner size</p>
         <span></span></div>
       <div id="key-log">
         <p id="key-key">key:&nbsp;<span></span></p>
         <p id="key-code">code <span>65</span></p>
       </div>
+      <div id="mouse-speed-div">
+        <p>Mouse Speed</p>
+        <p id="mouse-speed"></p>
+      </div>
+      <div id="mouse-distance">
+        <p>Mouse Trail</p> 
+        <p id="mouse-traveled"></p>
+      </div>
       <div class="div1" id="center">
-      
-<!-- VROOM VROOM -->
-        <audio id="audio">
+        <!-- VROOM VROOM -->
+        <!-- <audio id="audio">
           <source src="/sounds/vroom.mp3" type="audio/mp3">
         </audio>
-        <p class='vroom' onclick="play()">vroom vroom</p>
+        <p class='vroom' onclick="play()">vroom vroom</p> -->
       </div>
+
+      <!-- Canvas element -->
+      <canvas id="canvas"></canvas>
     </div>
     
-<!-- OUTER RIM DIVS -->
+    <!-- OUTER RIM DIVS -->
     <div class="div2"></div>
     <div class="div3"></div>
     <div class="div4"></div>
     <div class="div5"></div>
-    <div class="div6"><canvas>
-    </canvas></div>
-    <div class="div7">
-      <div class="circle2"></div>
-    </div>
+    <div class="div6"></div>
+    <div class="div7"></div>
     
-<!-- <script src="/libraries/p5/p5.min.js"></script> -->
-    <script src="/sericccus.github.io/script.js"></script>
+    <!-- <script src="/libraries/p5/p5.min.js"></script> -->
+    <script src="/script.js"></script>
   </body>
 </html>
